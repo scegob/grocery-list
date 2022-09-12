@@ -2,9 +2,6 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-[Porject images]
-(C:\Users\Billeh Scego\Documents\PromineoFrontEndBootcamp\labs\week15\grocery-list\images\Screenshot (315).png)
-
 ## Available Scripts
 
 In the project directory, you can run:
