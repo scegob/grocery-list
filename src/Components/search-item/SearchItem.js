@@ -1,5 +1,6 @@
 const SearchItem = ({search, setSearch}) => {
     return (
+        /* A form that is used to search for items. */
         <form className='searchForm' onSubmit={(e) => e.preventDefault()}>
             <label htmlFor='search'>Search</label>
             <input

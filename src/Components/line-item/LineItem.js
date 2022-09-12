@@ -18,6 +18,7 @@ const LineItem = ({item, handleCheck, handleDelete}) => {
                         onClick={() => handleDelete(item.id)} 
                         role='button'
                         tabIndex='0'
+                        /* A way to make the delete button accessible to screen readers. */
                         aria-label={`Delete ${item.item}`}
                     />
             </li>

@@ -3,6 +3,7 @@ import ItemList from "../item-list/ItemList"
 const Content = ({ items, handleCheck, handleDelete}) => {
 
     return (
+        // made the elements empty because I put elements in the app.js for the Content component
         <>
             {items.length ? (
             <ItemList 

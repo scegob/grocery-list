@@ -37,6 +37,7 @@ function App() {
         }
       }
 
+      /* Delaying the fetchItems function by 2 seconds. */
       setTimeout(() => {
         (async () => await fetchItems())();
       }, 2000)
@@ -45,6 +46,11 @@ function App() {
     // console.log('after useEffect')
 
 
+  /**
+   * It takes an item, creates a new item object with an id, checked property and the item, adds the
+   * new item to the items array, and then posts the new item to the API
+   * @param item - the item to be added to the list
+   */
   const addItem = async (item) => {
     const id = items.length ? items[items.length - 1].id + 1 : 1
     const myNewItem = { id, checked: false, item};
@@ -62,6 +68,11 @@ function App() {
     if (result) setFetchError(result);
   }
 
+  /**
+   * When the checkbox is clicked, the function will update the state of the item to checked or
+   * unchecked, and then send a PATCH request to the API to update the database
+   * @param id - the id of the item that was clicked
+   */
   const handleCheck = async (id) => {
     const listItems = items.map((item) => item.id === id ? { ...item, 
     checked: !item.checked } : item);
@@ -80,6 +91,11 @@ function App() {
     if (result) setFetchError(result); 
   }
 
+  /**
+   * It filters out the item with the id that matches the id passed in as an argument, and then sets
+   * the state to the new list of items
+   * @param id - the id of the item to be deleted
+   */
   const handleDelete = async (id) => {
     const listItems = items.filter((item) => item.id !== id);
     setItems(listItems)
